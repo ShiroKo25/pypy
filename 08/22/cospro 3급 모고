@@ -36,5 +36,26 @@ a = list(map(int, input().split()))
 while 4 in a:
     a.remove(4)
 print(a)
+문제 6번:
+a = input()
+total = 0
 
-문제 5번:
+while True:
+    u = input()
+    if u == "quit":
+        break
+    total += int(u)
+print(total)
+
+문제 8번:
+a = list(map(str, input().split()))
+b = []
+
+for i in range(len(a)):
+    if len(a[i]) >= 5:
+        b.append(a[i].upper())
+    if len(a[i]) < 5:
+        a[i].lower()
+        b.append(a[i].lower())
+print(b)
+
