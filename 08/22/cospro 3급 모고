@@ -70,7 +70,18 @@ for i in range(len(a)):
     f = a.remove(c)
     g = b.append(a)
 print(b)
-                            7번 문제 못 풀겠어요 젭알 헬프
+
+
+                            7번 선생님 풀이::
+
+a = list(map(int,input().split()))
+
+a.remove(max(a))
+a.remove(min(a))
+
+print(a)
+
+
 문제 8번:
 a = list(map(str, input().split()))
 b = []
