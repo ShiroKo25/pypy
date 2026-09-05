@@ -1,0 +1,80 @@
+문제 1번:
+a, b = map(int, input().split())
+
+if a > b:
+    print(a, "-", b, "=", a - b)
+elif a < b:
+    print(a, "+", b, "=", a + b)
+else:
+    print(a, "=", b)
+
+문제 2번:
+a = input()
+
+if a.isupper():
+    print(a.lower())
+elif a.islower():
+    print(a.upper())
+
+문제 4번:
+print('"python:\\test"')
+
+문제 5번:
+a = int(input())
+b = 0
+b += a / 60
+c = a % 60
+
+print(int(b), c)
+
+문제 6번:
+hap = 0
+i = 1
+
+n = int(input())
+
+while i < n:
+    if i % 3 == 0:
+        hap += i
+    i += 1
+
+print(hap)
+
+문제 7번:
+n = int(input())
+m = int(input())
+
+for i in range(n):
+    for i in range(m):
+        print("*", end="")
+    print("\n")
+
+문제 8번:
+n = int(input())
+
+arr = []
+arr = input().split()
+
+for i in range(n):
+    arr[i] = int(arr[i])
+
+print(max(arr) - min(arr))
+
+문제 9번:
+n = int(input())
+
+arr = []
+arr = input().split()
+
+for i in range(n):
+    arr[i] = int(arr[i])
+
+for i in range(0,n,2):
+        print(arr[i], end=" ")
+
+print()
+
+for i in range(1, n, 2):
+        print(arr[i], end=" ")
+
+문제 10
