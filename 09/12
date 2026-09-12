@@ -1,0 +1,105 @@
+문제 1번:
+a, b, c = map(int, input("sae suu rul ipruckhaseyo").split())
+
+hap = a + b + c
+ave = hap/3
+print("sum = %"% hap)
+print("avg = %.2f"% ave)
+
+문제 2번:
+a = input()
+b = input()
+
+h = len(a) + len(b)
+print(h)
+
+문제 3번:
+a = int(input())
+
+for i in range(a):
+    print("*")
+    for i in range(i):
+        print("\n")
+    					패스
+
+for i in range(5):
+    for j in range(i + 1):
+        print("*", end="")
+    print()				<------- 선생님 풀이:
+				
+
+문제 4번:
+s = input()
+
+print("'" + s + "'")  
+
+문제 5번:
+a = int(input())
+
+if a % 2 == 0:
+    print("jjacksu")
+elif a % 2 == 1:
+    print("holesu")
+
+문제 6번:
+a, b = map(int, input().split())
+
+if a > b:
+    print(a - b)
+elif b > a:
+    print(b - a)
+else:
+    print(a - b)
+
+문제 7번:
+n = int(input())
+
+while n > 0:
+    print(n)
+    n-=1
+					패스
+
+n = int(input())
+
+while n > 0:
+    print(n, end = " ")
+    n-=1		<------ 선생님 풀이:
+
+문제 8번:
+n = int(input())
+arr = list(map(int, input().split()))
+j = 0
+h = 0
+
+for i in arr:
+    if i % 2 == 0:
+        j += 1
+    elif i % 2 == 1:
+        h += 1
+print(h, j)
+
+문제 9번:
+n = int(input())
+arr = []
+arr = input().split()
+
+hap = 0
+avg = 0
+
+for i in range(n):
+    arr[i] = int(arr[i])
+
+for x in arr:
+    hap += x
+avg = hap / n
+print(hap)
+print("%.1f"%avg)
+
+문제 10번:
+s = input()
+cnt = 0
+for x in s:
+    if x == "p" or x == "P":
+        cnt += 1
+
+print(cnt)
