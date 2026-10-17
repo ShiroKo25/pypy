@@ -1,0 +1,29 @@
+import random
+def printMap(map):
+    for i in map:
+        if i == 0:
+            print("□",end='')
+        elif i == 1:
+            print("■",end='')
+    print()
+map = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+idx = random.choice(range(10))
+map[idx] = 7
+while True:
+    printMap(map)
+    player = int(input("위치값 ::"))
+    if player >= 11:
+        print("입력된 값이 잘못되었습니다.")
+        continue
+    if player <= 0:
+        print("입력된 값이 잘못되었습니다.")
+        continue
+    if  map[player-1] == 7:
+        print("BOOOM")
+        break
+    if map[player - 1] == 1:
+        print("이미 입력된 값입니다.")
+    else:
+        map[ player - 1] = 1
+        
+    
