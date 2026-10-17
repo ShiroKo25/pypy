@@ -1,0 +1,57 @@
+import random
+li = ["", "r", "s", "p"]
+user_score = 0
+com_score = 0
+
+while True:
+    winner = ""
+    user = int(input("input r, s, p>>"))
+    com = random.choice([1, 2, 3])
+    print("user's output:: ", li[user])
+    print("cp's output:: ", li[com])
+    #비겼을때
+    if user == com:
+        print("DRAW")
+
+    #user가 바위를 입력했을때
+    elif user == 1:
+        if com == 2:
+            winner = "user"
+        elif com == 3:
+            winner = "com"
+
+    #user가 가위를 입력했을때 
+    elif user == 2:
+        if com == 1:
+            winner = "com"
+        elif com == 3:
+            winner = "user"
+
+    #user가 보를 입력했을때 
+    elif user == 3:
+        if com == 1:
+            winner = "user"
+        elif com == 2:
+            winner = "com"
+    
+    #user가 점수를 획득할 경우
+    if winner == "user":
+        user_score += 1
+
+    #com이 점수를 획득할 경우
+    else: 
+        com_score += 1
+
+    if winner != "":
+        print(winner," WIN!")
+        print("user : ", user_score)
+        print("com : ", com_score)
+
+    #승자를 결정하는 방법
+    if user_score >= 2:
+        print("user WIN!")
+        break
+    elif com_score >= 2:
+        print("com WIN!")
+        break
+
